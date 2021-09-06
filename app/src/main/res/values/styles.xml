@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="actionMenu" parent="Theme.AppCompat.Light">
+        <item name="background">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorBlack</item>
+    </style>
+
+    <style name="settings_btn_style">
+        <item name="android:background">@drawable/ripple_effect</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="normal_text">
+        <item name="android:layout_marginStart">@dimen/horizantal_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="small_text">
+        <item name="android:layout_marginStart">@dimen/horizantal_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
+    <style name="separator_style">
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/circleimagewiev_border_widh</item>
+        <item name="android:background">@color/colorGrey</item>
+    </style>
+
+    <style name="edittext_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/horizantal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/horizantal_margin</item>
+        <item name="android:layout_marginTop">@dimen/horizantal_margin</item>
+        <item name="android:textColor">@color/textColor1</item>
+        <item name="android:padding">@dimen/large_padding_size</item>
+        <item name="android:background">@drawable/border1</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+    </style>
+
+    <style name="style_message_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/message_text_size</item>
+    </style>
+</resources>

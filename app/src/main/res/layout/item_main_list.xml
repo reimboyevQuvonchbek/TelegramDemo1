@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/settings_btn_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/vertical_margin"
+    android:layout_marginStart="@dimen/horizantal_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mainlist_item_photo"
+        android:layout_width="@dimen/settings_user_avatar_photo_with"
+        android:layout_height="@dimen/settings_user_avatar_photo_with"
+        android:src="@drawable/default_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/is_online_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:foreground="@color/color_green"
+        app:cardCornerRadius="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="3dp"
+
+        app:layout_constraintEnd_toEndOf="@id/mainlist_item_photo"
+        app:layout_constraintBottom_toBottomOf="@id/mainlist_item_photo"
+        />
+    <TextView
+        android:id="@+id/mainlist_name"
+        style="@style/normal_text"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/mainlist_lastmessage_time"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/mainlist_item_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yura Petrov" />
+
+    <TextView
+        android:id="@+id/mainlist_lastmessage_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:layout_marginEnd="@dimen/horizantal_margin"
+        android:textColor="@color/colorAccentDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12:12" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_count"
+        android:layout_marginEnd="@dimen/horizantal_margin"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="13dp"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/color_green"
+        app:layout_constraintTop_toBottomOf="@id/mainlist_lastmessage_time">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/mainlist_message_count"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/white"
+
+            tools:text="12" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/mainlist_lastmessage_text"
+        style="@style/small_text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@id/mainlist_item_photo"
+        app:layout_constraintTop_toBottomOf="@id/mainlist_name"
+        tools:text="в сети" />
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#88000000"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/mainlist_lastmessage_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

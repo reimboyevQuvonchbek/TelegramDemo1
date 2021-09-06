@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/vertical_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bloc_received_voice_message"
+        android:layout_width="@dimen/voice_message_width"
+        android:layout_height="@dimen/voice_message_height"
+        android:background="@drawable/bg_receiving_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/chat_received_btn_play"
+            android:layout_width="@dimen/chat_btn_width"
+            android:layout_marginStart="@dimen/normal_padding_size"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_play_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_received_btn_pause"
+            android:layout_width="@dimen/chat_btn_width"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_pause_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/received_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="#090909"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chat_received_btn_play"
+             />
+        <TextView
+            android:id="@+id/chat_received_voice_message_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/vertical_margin"
+            android:gravity="end"
+            android:textSize="12dp"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintStart_toEndOf="@id/chat_received_btn_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="00:00" />
+        <TextView
+            android:id="@+id/chat_received_voice_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/vertical_margin"
+            android:gravity="end"
+            android:textSize="12sp"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="21:45" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bloc_user_voice_message"
+        android:layout_width="@dimen/voice_message_width"
+        android:layout_height="@dimen/voice_message_height"
+        android:background="@drawable/bg_user_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chat_user_btn_play"
+            android:layout_width="@dimen/chat_btn_width"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_play_green"
+            android:layout_marginStart="@dimen/normal_padding_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_user_btn_pause"
+            android:layout_width="@dimen/chat_btn_width"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_pause_green"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/user_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_padding_size"
+            android:progressBackgroundTint="#090909"
+            android:progressTint="@color/color_green"
+            android:thumbTint="@color/color_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chat_user_btn_play" />
+        <TextView
+            android:id="@+id/chat_user_voice_message_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/vertical_margin"
+            android:gravity="end"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintStart_toEndOf="@id/chat_user_btn_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="00:00" />
+
+        <TextView
+            android:id="@+id/chat_user_voice_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#31BA0F"
+            android:textSize="12sp"
+            android:layout_marginEnd="@dimen/vertical_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/voice_isRead"
+            tools:text="21:45" />
+        <ImageView
+            android:id="@+id/voice_isRead"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="@dimen/horizantal_margin"
+            app:layout_constraintTop_toBottomOf="@id/user_seekbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_check_1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
